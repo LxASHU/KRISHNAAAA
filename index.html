@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🩷</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #ff69b4;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff85c1;
+}
+
+.cat {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+}
+
+.cat1 { top: 10%; left: 5%; }
+.cat2 { bottom: 10%; right: 5%; }
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg" class="cat cat1">
+<img src="https://cdn2.thecatapi.com/images/MTY3ODIyMg.jpg" class="cat cat2">
+
+<div class="container" id="intro">
+  <h1>Hey 🩷</h1>
+  <p> something for you.</p>
+  <button onclick="showMessage()">Read it</button>
+</div>
+
+<div class="container" id="coreMessage" style="display:none;">
+  <p>
+   "I knew the second I met you that there was something about you I needed.
+    Turns out, it wasn’t something about you at all. It was just you."
+                                                 
+                                                         - Jamie McGuire
+  </p>
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("coreMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
