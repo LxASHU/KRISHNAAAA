@@ -3,58 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You 🩷</title>
+<title>For You</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
+  background: linear-gradient(135deg, #f8e8ee, #f3d1dc);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   text-align: center;
-  overflow: hidden;
+  color: #4a3f44;
 }
 
 .container {
   max-width: 600px;
-  animation: fadeIn 1.5s ease-in-out;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  font-size: 1rem;
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
-  background: #ff69b4;
+  background: #d88ea1;
   color: white;
   transition: 0.3s;
 }
 
 button:hover {
   transform: scale(1.05);
-  background: #ff85c1;
+  background: #c77c91;
 }
 
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
 
+<body>
 
 <div class="container" id="intro">
-  <h1>Hey 🩷</h1>
-  <p> something for you.</p>
+  <h1>Hey</h1>
+  <p>something for you.</p>
   <button onclick="showMessage()">Read it</button>
 </div>
 
@@ -62,8 +74,9 @@ button:hover {
   <p>
    "I knew the second I met you that there was something about you I needed.
     Turns out, it wasn’t something about you at all. It was just you."
-                                                 
-                                                         - Jamie McGuire
+    
+    
+                                                              - Jamie McGuire
   </p>
 </div>
 
